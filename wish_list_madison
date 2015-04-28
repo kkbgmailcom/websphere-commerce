@@ -1,0 +1,18 @@
+http://localhost/webapp/wcs/stores/servlet/AjaxInterestItemAdd?storeId=10051&catalogId=10051&langId=-1&catEntryId=10282&URL=SuccessfulAJAXRequest&requesttype=ajax
+/* { "catalogId": ["10051"], "catEntryId": ["10282"], "requesttype": ["ajax"], "langId": ["-1"], "storeId": ["10051"], "URL": ["SuccessfulAJAXRequest"] } */
+
+/AjaxInterestItemDelete
+/InterestItemListDeleteCmd
+/InterestItemListCopyCmd
+
+IITEMLIST
+IITEMLIST_ID
+MEMBER_ID
+DESCRIPTION
+
+IITEM
+CATENTRY_ID
+IITEMLIST_ID
+MEMBER_ID
+STOREENT_ID
+QUANTITY
