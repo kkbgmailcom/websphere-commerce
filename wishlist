@@ -11,3 +11,4 @@ Multiple Wish List Feature tables
 GRGFTREG(gift registry and wish list profile info)
 GRGFTITM(gift registry and wish list item)
 GRPERATTR(personalization attributes for gift registry and wish list items)
+[note: no relation w.r.t memberId. all list are public]
