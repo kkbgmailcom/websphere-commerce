@@ -1,0 +1,13 @@
+
+1. Add to wish list Functionality 
+In the case of single  wish list  it calls the InterestItemAdd  and it populates the  IITEMLIST, IITEM tables.
+Single Wish List Feature tables
+IITEMLIST(InterestItemList)
+IITEM(IItemList)
+CIITEMLIST(the current list)
+
+2. In the case of multiple wish list it calls the GiftCenterFacadeClient.createGiftList() followed by calling  GiftCenterFacadeClient.addItem() .It populates the GRGFTREG, GRGFTITM tables.
+Multiple Wish List Feature tables
+GRGFTREG(gift registry and wish list profile info)
+GRGFTITM(gift registry and wish list item)
+GRPERATTR(personalization attributes for gift registry and wish list items)
