@@ -1,0 +1,48 @@
+Tables
+
+GRGFTREG
+GIFTREGISTRY_ID		
+PREEVENTADDRESS_ID.POSTEVENTADDRESS_ID
+STATUS
+STOREID
+REGTYPE	(1-wish list)
+NAME
+
+GRGFTITM
+GIFTITEM_ID
+GIFTREGISTRY_ID
+PARTNUMBER
+
+component services URL
+giftcenter.authenticate
+http://localhost/webapp/wcs/stores/servlet/en/aurora/AjaxGiftListServiceAuthenticate?storeId=11001&catalogId=10351&langId=-1&giftListId=10001&requesttype=ajax
+* { "externalId": ["10001"], "giftListId": ["10001"], "storeId": ["11001"] } */
+/* { "errorCode": null, "errorMessage": "The gift list 11001 does not exist. ", "errorMessageKey": "_ERR_DELETE_OR_UPDATE_NON_EXIST_GIFT_LIST", "errorMessageParam": ["11001"], "correctiveActionMessage": "", "correlationIdentifier": "5bba992f:14cf9ae9e64:-7fc3", "exceptionData": null, "exceptionType": "0", "originatingCommand": "AjaxGiftListServiceAuthenticate", "systemMessage": "" } */
+
+giftcenter.createGiftList
+http://localhost/webapp/wcs/stores/servlet/en/aurora/CustomGiftListServiceCreate?storeId=11001&catalogId=10351&langId=-1&name=WishList&requesttype=ajax
+/* { "externalId": ["10004"], "giftListName": ["WishList"], "giftListId": ["10004"], "registryAccessPreference": ["Private"], "storeId": ["11001"] } */
+
+giftcenter.addItem
+http://localhost/webapp/wcs/stores/servlet/en/aurora/AjaxGiftListServiceAddItem?storeId=11001&catalogId=10351&langId=-1&catEntryId_1=13934&requesttype=ajax&giftListId=10003&quantity_1=1
+/* { "externalId": ["10003"], "giftListId": ["10003"], "giftListItemId": ["10003"], "storeId": ["11001"] } */
+
+giftcenter.updateItem
+http://localhost/webapp/wcs/stores/servlet/en/aurora/AjaxGiftListServiceUpdateItem?storeId=11001&catalogId=10351&langId=-1&catEntryId_1=13934&requesttype=ajax&giftListId=10003&quantity_1=5
+/* { "externalId": ["10003"], "giftListId": ["10003"], "giftListItemId": ["10003"], "storeId": ["11001"] } */
+
+giftcenter.deleteItem
+http://localhost/webapp/wcs/stores/servlet/en/aurora/AjaxGiftListServiceDeleteItem?storeId=11001&catalogId=10351&langId=-1&catEntryId_1=13934&requesttype=ajax&giftListId=10003&quantity_1=5
+/* { "externalId": ["10003"], "giftListId": ["10003"], "giftListItemId": ["10003"], "storeId": ["11001"] } */
+
+giftcenter.updateGiftList
+http://localhost/webapp/wcs/stores/servlet/en/aurora/AjaxGiftListServiceUpdateGiftList?storeId=11001&catalogId=10351&langId=-1&giftListId=10003&requesttype=ajax
+/* { "externalId": ["10003"], "giftListName": ["WishList"], "giftListId": ["10003"], "storeId": ["11001"] } */
+
+giftcenter.deleteGiftList
+http://localhost/webapp/wcs/stores/servlet/en/aurora/AjaxGiftListServiceDeleteGiftList?storeId=11001&catalogId=10351&langId=-1&giftListId=10003&requesttype=ajax
+/* { "giftListState": ["Deleted"], "externalId": ["10003"], "giftListId": ["10003"], "storeId": ["11001"] } */
+
+https://localhost/webapp/wcs/stores/servlet/AjaxOrderChangeServiceItemAdd
+catEntryId:13934
+
